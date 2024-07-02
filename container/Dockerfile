@@ -1,4 +1,4 @@
-FROM rocker/rstudio:latest
+FROM rocker/tidyverse:4.4.1
 
 RUN install2.r --error --skipinstalled \
 BiocManager \
@@ -33,10 +33,3 @@ RUN Rscript -e "BiocManager::install(c(\
 'DOSE', \
 'rvcheck'\
 ))"
-
-
-COPY install_packages.R install_packages.R
-RUN wget https://cran.r-project.org/src/contrib/tidyverse_2.0.0.tar.gz
-RUN Rscript install_packages.R
-RUN rm *.tar.gz
-RUN rm install_packages.R

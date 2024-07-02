@@ -1,4 +1,4 @@
-docker buildx create --platform "linux/amd64,linux/arm64" --name multibuild --use
+# docker buildx create --platform "linux/amd64" --name multibuild --use
 
 docker buildx build \
 --label org.opencontainers.image.title=rnaseq-docker-rstudio \
@@ -8,7 +8,7 @@ docker buildx build \
 --label org.opencontainers.image.version=1.0.0 \
 --label org.opencontainers.image.created=$(date -u +"%Y-%m-%dT%H:%M:%S.%3NZ") \
 --label org.opencontainers.image.licenses=MIT \
---platform linux/amd64,linux/arm64 \
+--platform linux/amd64 \
 --tag ghcr.io/lescailab/rnaseq-docker-rstudio:1.0.0 \
 --tag ghcr.io/lescailab/rnaseq-docker-rstudio:latest \
 --push .
