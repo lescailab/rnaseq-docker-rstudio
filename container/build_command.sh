@@ -1,4 +1,4 @@
-# docker buildx create --platform "linux/amd64" --name multibuild --use
+# docker buildx create --platform "linux/amd64" --name build --use
 
 docker buildx build \
 --label org.opencontainers.image.title=rnaseq-docker-rstudio \
