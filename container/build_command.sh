@@ -11,4 +11,5 @@ docker buildx build \
 --platform linux/amd64 \
 --tag ghcr.io/lescailab/rnaseq-docker-rstudio:1.0.0 \
 --tag ghcr.io/lescailab/rnaseq-docker-rstudio:latest \
---push .
+--push \
+.
