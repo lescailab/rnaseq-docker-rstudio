@@ -1,4 +1,4 @@
-FROM ghcr.io/lescailab/rnaseq-docker-rstudio:latest
+FROM ghcr.io/lescailab/rnaseq-docker-rstudio:1.0.0
 
 
 RUN Rscript -e "BiocManager::install(c(\
