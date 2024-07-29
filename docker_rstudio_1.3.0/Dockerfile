@@ -1,0 +1,9 @@
+FROM ghcr.io/lescailab/rnaseq-docker-rstudio:1.2.0
+
+COPY install_packages.R install_packages.R
+RUN wget https://cran.r-project.org/src/contrib/Seurat_5.1.0.tar.gz
+RUN wget https://cran.r-project.org/src/contrib/SeuratObject_5.0.2.tar.gz
+RUN wget https://cran.r-project.org/src/contrib/Matrix_1.7-0.tar.gz
+RUN Rscript install_packages.R
+RUN rm *.tar.gz
+RUN rm install_packages.R
