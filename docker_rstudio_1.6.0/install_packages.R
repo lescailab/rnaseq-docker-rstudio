@@ -1,0 +1,1 @@
+install.packages("infer_1.0.7.tar.gz", repos=NULL)
